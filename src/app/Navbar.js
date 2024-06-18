@@ -1,5 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import Example from "@/components/Example";
+
 const NavLink = ({ href, children, additionalClasses = "" }) => (
   <a href={href} className={`text-black rounded-lg p-2 ${additionalClasses}`}>
     {children}
@@ -14,9 +16,11 @@ const Navbar = () => {
           <div className='flex items-center'>
             <div className='flex-shrink-0'>
               <NavLink href='/'>
-                <img
+                <Image
                   src='/logo-dark.svg'
                   alt='SuperSourcing Logo'
+                  width={32} // Adjust the width as needed
+                  height={32} // Adjust the height as needed
                   className='h-8 w-auto px-2' // Adjusted padding for the image
                 />
               </NavLink>

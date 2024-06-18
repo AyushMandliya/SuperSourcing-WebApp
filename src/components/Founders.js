@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Hero.module.css";
+import Image from "next/image";
 
 const companies = [
   {
@@ -41,25 +41,29 @@ const companies = [
     img: "https://imgs.search.brave.com/QHdZuewSmB_Am-RM4OTd0eU1tEumawNGtuuGeQZ2WZo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9UZXNsYSxf/SW5jLi9UZXNsYSxf/SW5jLi1Xb3JkbWFy/ay1SZWQtTG9nby53/aW5lLnN2Zw.svg",
     ceo: "Elon Musk",
     ceoImg:
-      "https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg",
+      "https://imgs.search.brave.com/NXzA7fcH7Mn5HU2LYFMk0lphJEfyfBSwSzsnnUIKmm0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlYmxhemUuY29t/L21lZGlhLWxpYnJh/cnkvaW1hZ2UuanBn/P2lkPTUyNDY1NjMy/JndpZHRoPTEyNDUm/aGVpZ2h0PTcwMCZx/dWFsaXR5PTg1JmNv/b3JkaW5hdGVzPTAs/MCwwLDEwNw",
   },
 ];
 
 const ProfileCard = ({ img, ceo, ceoImg }) => (
-  <div className='flex-none w-1/4 p-4'>
+  <div className='flex-none w-60 p-4'>
     <div className='mb-4'>
-      <img
+      <Image
         src={ceoImg}
         alt={ceo}
-        className='w-32 h-32 object-cover rounded-full mx-auto'
+        width={128}
+        height={128}
+        className='object-cover rounded-full mx-auto'
       />
     </div>
     <h4 className='text-center text-lg font-semibold text-black'>{ceo}</h4>
     <div className='mt-4'>
-      <img
+      <Image
         src={img}
         alt='company logo'
-        className='w-24 h-12 object-contain mx-auto'
+        width={96}
+        height={48}
+        className='object-cover mx-auto'
       />
     </div>
   </div>

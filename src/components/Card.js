@@ -1,17 +1,30 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 // Separate Card component
 const Card = ({ img, content, ceo, ceoImg }) => (
   <div className='w-full rounded-lg shadow-md lg:max-w-sm mx-auto bg-gray-200 p-4'>
     <div className='flex justify-center mt-4'>
-      <img className='object-contain w-20 h-20' src={img} alt={ceo} />
+      <Image
+        className='object-contain w-20 h-20'
+        src={img}
+        alt={ceo}
+        width={80}
+        height={80}
+      />
     </div>
     <div className='p-4 text-center'>
       <p className='mb-2 leading-normal max-h-24 overflow-hidden'>{content}</p>
       <div className='flex justify-center items-center mt-4'>
-        <img className='w-10 h-10 rounded-full mr-2' src={ceoImg} alt={ceo} />
+        <Image
+          className='w-10 h-10 rounded-full mr-2'
+          src={ceoImg}
+          alt={ceo}
+          width={40}
+          height={40}
+        />
         <p className='text-md font-medium'>{ceo}</p>
       </div>
     </div>
@@ -75,7 +88,7 @@ const CardComponent = () => {
         "Tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California. and currently the top company in Aerospace",
       ceo: "Elon Musk",
       ceoImg:
-        "https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg",
+        "https://imgs.search.brave.com/NXzA7fcH7Mn5HU2LYFMk0lphJEfyfBSwSzsnnUIKmm0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlYmxhemUuY29t/L21lZGlhLWxpYnJh/cnkvaW1hZ2UuanBn/P2lkPTUyNDY1NjMy/JndpZHRoPTEyNDUm/aGVpZ2h0PTcwMCZx/dWFsaXR5PTg1JmNv/b3JkaW5hdGVzPTAs/MCwwLDEwNw",
     },
   ];
 

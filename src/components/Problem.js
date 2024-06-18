@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
 
 const ListItem = ({ iconSrc, text }) => (
   <div className='flex items-center'>
-    <img src={iconSrc} alt='' className='h-6 w-6' />
+    <Image src={iconSrc} alt='' width={24} height={24} className='h-6 w-6' />
     <p className='text-lg text-gray-600 ml-2'>{text}</p>
   </div>
 );
@@ -58,9 +59,11 @@ function Problem() {
 
         {/* Center Image */}
         <div className='flex flex-col items-center justify-center mx-8'>
-          <img
+          <Image
             src='/Chart_Circle.svg'
             alt='SuperSourcing Logo'
+            width={500} // Set the appropriate width
+            height={500} // Set the appropriate height
             className='h-auto w-auto'
           />
         </div>
