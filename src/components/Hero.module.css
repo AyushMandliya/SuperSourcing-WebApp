@@ -1,0 +1,50 @@
+/* components/Hero.module.css */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://unsplash.com/photos/person-using-laptop-computers-9SoCnyQmkzI') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.bg_linear_gradient {
+    background: linear-gradient(90deg, #0B4CFF 65%, #EE4C8D 99.54%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.top-0 {
+    top: 0;
+}
+
+/*  */
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
