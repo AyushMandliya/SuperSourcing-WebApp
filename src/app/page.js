@@ -7,7 +7,6 @@ import Invester from "@/components/Invester";
 import Marquee from "react-fast-marquee";
 import MyCarousel from "@/components/MyCarousel";
 import Founder from "@/components/Founders";
-import Example from "../components/Example"; // Correct import path
 
 const Home = () => {
   return (
